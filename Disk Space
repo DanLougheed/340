@@ -1,0 +1,93 @@
+#!/usr/bin/local_perl
+# Dont use the embedded apache perl....
+# Author : Peter
+# Date : Apr 11 2006
+# check_hd IP COMMUNITY warnlevel criticallevel disc
+sub print_usage 
+{
+print "
+############################## check_hd ###############################
+# Version : 1.0 
+# Date : Apr 11 2006  
+# Author  : Peter Stimpel 
+# Thanks to Benjamin Jakubowski for the idea to walk through snmp
+# Help : http://www.peters-webcorner.de/nagios/
+# Licence : GPL - http://www.fsf.org/licenses/gpl.txt 
+#######################################################################\n";
+	print "check_hd IP COMMUNITY warnlevel criticallevel disc\n";
+	print"\ncheck_hd -v for version info\n";
+	
+}
+$PROGNAME = "check_hd";
+if (@ARGV[0] eq "-v") {
+	print_usage();
+	exit 0;
+
+}
+if  ( @ARGV[0] eq "" || @ARGV[1] eq "" || @ARGV[2] eq "" || @ARGV[3] eq "" || @ARGV[4] eq "")
+{
+    print_usage();
+    exit 0;
+}
+$IP=@ARGV[0];
+$COMMUNITY=@ARGV[1];
+$Service=@ARGV[2];
+$LW=@ARGV[4];
+$resultat =`snmpwalk -v 1 -c $COMMUNITY $IP  hrStorageDescr | grep $LW\:\\`;
+$fullsize1=0;
+$usedsize1=0;
+$freespace=0;
+if ( $resultat ) {
+		$resstring= $resultat;
+		if ($resultat = ~/hrStorageDescr./) {
+			$tsid = substr($resstring,35,1);		
+			$resultat2 =`snmpwalk -v 1 -c $COMMUNITY $IP hrStorageAllocationUnits.$tsid`;
+			$resstring2 = $resultat2;
+			if ($resultat2 = ~/hrStorageAllocationUnits.$tsid/) {
+				#@unit = substr($resstring2,58,5);
+				@unit=split(/:/,$resstring2);
+				@unit1=split(/\ /,$unit[3]);
+				$unit1=$unit1[1];
+				$resultat3 =`snmpwalk -v 1 -c $COMMUNITY $IP hrStorageSize.$tsid`;
+				$resstring3 = $resultat3;
+				if ($resultat3 = ~/hrStorageSize.$tsid/) {
+					@ta=split(/INTEGER/,$resstring3);				
+					chomp($ta[1]);
+					$size1=substr($ta[1],1);
+					$fullsize1 = $fullsize1 + $size1;
+					$fullsize1 = $fullsize1 * $unit1;
+				}
+				$resultat4 =`snmpwalk -v 1 -c $COMMUNITY $IP hrStorageUsed.$tsid`;
+				$resstring4 = $resultat4;
+				if ($resultat4 = ~/hrStorageUsed.$tsid/) {
+					@tb=split(/INTEGER/,$resstring4);				
+					chomp($tb[1]);
+					$size1=substr($tb[1],1);
+					$usedsize1 = $usedsize1 + $size1;
+					$usedsize1 = $usedsize1 * $unit1;
+				}
+				if ($usedsize1 > 0 && $fullsize1 > 0) {
+					$freespace=$fullsize1 - $usedsize1;
+					$freespace=$freespace / 1024 / 1024 / 1024;
+					$percfilled=$usedsize1 * 100 / $fullsize1;
+					if ($percfilled > @ARGV[3]) {
+						print "critical: hd $LW in use $percfilled perc and $freespace GB free w-$ARGV[2] c-$ARGV[3]\n";
+					        exit 2;
+					}
+					if ($percfilled > @ARGV[2]) {
+						print "warning: hd $LW in use $percfilled perc and $freespace GB free w-$ARGV[2] c-$ARGV[3]\n";
+					        exit 1;
+					}
+					print "OK: hd $LW in use $percfilled perc and $freespace GB free w-$ARGV[2] c-$ARGV[3]\n";
+					exit 0;
+				}
+			}
+		}
+	print "Critical  : Response unknown\n";
+        exit 2;
+}
+else
+{
+	print "Critical  : no response\n";
+        exit 2;
+}
