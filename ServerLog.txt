@@ -1,0 +1,20 @@
+[12/15/16 12:00:20] [Server API] Verbose: TerrariaApi - Server v1.17.0.0 started.
+[12/15/16 12:00:20] [Server API] Verbose: 	Command line: /home/Terraria/tshock/TerrariaServer.exe
+[12/15/16 12:00:20] [Server API] Verbose: 	OS: Unix 3.16.0.4 (64bit: True)
+[12/15/16 12:00:20] [Server API] Verbose: 	Mono: True
+[12/15/16 12:00:22] [Server API] Info: Plugin TShock v4.2.9.0 (by The Nyx Team) initiated.
+[12/16/16 14:22:59] [Server API] Verbose: TerrariaApi - Server v1.17.0.0 started.
+[12/16/16 14:22:59] [Server API] Verbose: 	Command line: /home/Terraria/tshock/TerrariaServer.exe
+[12/16/16 14:22:59] [Server API] Verbose: 	OS: Unix 3.16.0.4 (64bit: True)
+[12/16/16 14:22:59] [Server API] Verbose: 	Mono: True
+[12/16/16 14:22:59] [Server API] Info: Plugin TShock v4.2.9.0 (by The Nyx Team) initiated.
+[12/19/16 07:20:39] [Server API] Verbose: TerrariaApi - Server v1.17.0.0 started.
+[12/19/16 07:20:39] [Server API] Verbose: 	Command line: /home/Terraria/tshock/TerrariaServer.exe
+[12/19/16 07:20:39] [Server API] Verbose: 	OS: Unix 3.16.0.4 (64bit: True)
+[12/19/16 07:20:39] [Server API] Verbose: 	Mono: True
+[12/19/16 07:20:40] [Server API] Info: Plugin TShock v4.2.9.0 (by The Nyx Team) initiated.
+[12/19/16 12:05:05] [Server API] Verbose: TerrariaApi - Server v1.17.0.0 started.
+[12/19/16 12:05:05] [Server API] Verbose: 	Command line: /home/Terraria/tshock/TerrariaServer.exe
+[12/19/16 12:05:05] [Server API] Verbose: 	OS: Unix 3.16.0.4 (64bit: True)
+[12/19/16 12:05:05] [Server API] Verbose: 	Mono: True
+[12/19/16 12:05:05] [Server API] Info: Plugin TShock v4.2.9.0 (by The Nyx Team) initiated.

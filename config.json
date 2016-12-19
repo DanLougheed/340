@@ -12,9 +12,9 @@
   "RangeChecks": true,
   "DisableBuild": false,
   "SuperAdminChatRGB": [
-    255,
-    0,
-    0
+    255.0,
+    0.0,
+    0.0
   ],
   "SuperAdminChatPrefix": "(Admin) ",
   "SuperAdminChatSuffix": "",
@@ -45,7 +45,6 @@
   "DefaultRegistrationGroupName": "default",
   "DefaultGuestGroupName": "guest",
   "DisableSpewLogs": true,
-  "DisableSecondUpdateLogs": false,
   "HashAlgorithm": "sha512",
   "BufferPackets": true,
   "ServerFullReason": "Server is full",
@@ -76,14 +75,13 @@
   "MaxRangeForDisabled": 10,
   "ServerPassword": "",
   "RegionProtectChests": false,
-  "RegionProtectGemLocks": true,
   "DisableLoginBeforeJoin": false,
   "DisableUUIDLogin": false,
   "KickEmptyUUID": false,
   "AllowRegisterAnyUsername": false,
   "AllowLoginAnyUsername": true,
-  "MaxDamage": 1175,
-  "MaxProjDamage": 1175,
+  "MaxDamage": 175,
+  "MaxProjDamage": 175,
   "KickOnDamageThresholdBroken": false,
   "IgnoreProjUpdate": false,
   "IgnoreProjKill": false,
@@ -106,9 +104,9 @@
   "RevertToTextLogsOnSqlFailures": 10,
   "PreventInvalidPlaceStyle": true,
   "BroadcastRGB": [
-    127,
-    255,
-    212
+    127.0,
+    255.0,
+    212.0
   ],
   "RestUseNewPermissionModel": true,
   "ApplicationRestTokens": {},
@@ -130,11 +128,5 @@
   "AnonymousBossInvasions": true,
   "MaxHP": 500,
   "MaxMP": 200,
-  "SaveWorldOnLastPlayerExit": true,
-  "BCryptWorkFactor": 7,
-  "MinimumPasswordLength": 4,
-  "RESTMaximumRequestsPerInterval": 5,
-  "RESTRequestBucketDecreaseIntervalMinutes": 1,
-  "RESTLimitOnlyFailedLoginRequests": true,
-  "ShowBackupAutosaveMessages": true
+  "SaveWorldOnLastPlayerExit": true
 }

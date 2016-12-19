@@ -1,0 +1,37 @@
+
+********************************************
+*                 10                *
+********************************************
+********************************************
+*                 11                *
+********************************************
+********************************************
+*                 12                *
+********************************************
+********************************************
+*                 13                *
+********************************************
+********************************************
+*                 14                *
+********************************************
+********************************************
+*                 15                *
+********************************************
+********************************************
+*                 16                *
+********************************************
+********************************************
+*                 17                *
+********************************************
+********************************************
+*                 18                *
+********************************************
+Dec 18 21:17:13 Terraria iceweasel.desktop[1880]: 1482113833057#011addons.productaddons#011ERROR#011Request failed certificate checks: [Exception... "SSL is required and URI scheme is not https."  nsresult: "0x8000ffff (NS_ERROR_UNEXPECTED)"  location: "JS frame :: resource://gre/modules/CertUtils.jsm :: checkCert :: line 145"  data: no]
+Dec 18 21:17:13 Terraria iceweasel.desktop[1880]: 1482113833057#011addons.productaddons#011ERROR#011Request failed certificate checks: [Exception... "SSL is required and URI scheme is not https."  nsresult: "0x8000ffff (NS_ERROR_UNEXPECTED)"  location: "JS frame :: resource://gre/modules/CertUtils.jsm :: checkCert :: line 145"  data: no]
+Dec 18 21:17:13 Terraria iceweasel.desktop[1880]: 1482113833057#011addons.productaddons#011ERROR#011Request failed certificate checks: [Exception... "SSL is required and URI scheme is not https."  nsresult: "0x8000ffff (NS_ERROR_UNEXPECTED)"  location: "JS frame :: resource://gre/modules/CertUtils.jsm :: checkCert :: line 145"  data: no]
+********************************************
+*                 19                *
+********************************************
+Dec 19 02:22:02 Terraria gnome-session[1629]: (gnome-shell:1766): Gjs-WARNING **: JS ERROR: Exception in callback for signal: ask-question: TypeError: this._entry.clutter_text is null
+Dec 19 02:22:02 Terraria gnome-session[1629]: (gnome-shell:1766): Gjs-WARNING **: JS ERROR: Exception in callback for signal: ask-question: TypeError: this._entry.clutter_text is null
+Dec 19 02:22:02 Terraria gnome-session[1629]: (gnome-shell:1766): Gjs-WARNING **: JS ERROR: Exception in callback for signal: ask-question: TypeError: this._entry.clutter_text is null

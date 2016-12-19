@@ -7,18 +7,18 @@
   "StartingInventory": [
     {
       "netID": -15,
-      "prefix": 0,
-      "stack": 1
+      "stack": 1,
+      "prefix": 0
     },
     {
       "netID": -13,
-      "prefix": 0,
-      "stack": 1
+      "stack": 1,
+      "prefix": 0
     },
     {
       "netID": -16,
-      "prefix": 0,
-      "stack": 1
+      "stack": 1,
+      "prefix": 0
     }
   ]
 }
